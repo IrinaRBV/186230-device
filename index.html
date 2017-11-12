@@ -8,7 +8,7 @@
   <body>
 
     <header class="main-header">
-      <a class="main-header__logo" href="#"><img src="http://placehold.it/150x100" alt="Device"></a>
+      <a class="main-header__logo" href="#"><img src="img/logo.png" alt="Device"></a>
       <nav class="main-nav">
         <form class="search">
           <input type="search" name="search">
@@ -23,7 +23,7 @@
         </ul>
         <ul class="site-nav">
           <li class="site-nav__item"><a href="#">Каталог товаров</a>
-            <ul class="catalog-nav">
+            <ul class="catalog-nav visually-hidden">
               <li class="catalog-nav__item"><a href="#">Виртуальная реальность</a></li>
               <li class="catalog-nav__item"><a href="#">Моноподы для селфи</a></li>
               <li class="catalog-nav__item"><a href="#">Экшн-камеры</a></li>
@@ -45,7 +45,7 @@
       <section class="slider">
 
         <div class="slider__section">
-          <img src="http://placehold.it/150x100" alt="">
+          <img src="img/slider-1.png" alt="">
           <p class="slider__slogan">Делай селфи, как Бен Стиллер!</p>
           <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
           <a class="slider__btn btn" href="#">Подробнее</a>
@@ -63,8 +63,8 @@
           </table>
         </div>
 
-        <div class="slider__section">
-          <img src="http://placehold.it/150x100" alt="">
+        <div class="slider__section visually-hidden">
+          <img src="img/slider-2.png" alt="">
           <p class="slider__slogan">Худеем правильно!</p>
           <p class="slider__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
           <a class="slider__btn btn" href="#">Подробнее</a>
@@ -78,8 +78,8 @@
           </table>
         </div>
 
-        <div class="slider__section">
-          <img src="http://placehold.it/150x100" alt="">
+        <div class="slider__section visually-hidden">
+          <img src="img/slider-3.png" alt="">
           <p class="slider__slogan">Порхает как бабочка, жалит как пчела!</p>
           <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
           <a class="slider__btn btn" href="#">Подробнее</a>
@@ -178,8 +178,8 @@
         <section class="contact">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <!--Карта-->
-          <a class="contact__btn btn" href="#">Напишите нам</a>
+          <img src="http://placehold.it/150x100" alt="Карта">
+          <button class="contact__btn btn" type="button">Напишите нам</button>
         </section>
       </div>
 
@@ -215,21 +215,27 @@
     </footer>
 
     <!--Popap Map-->
-    <div class="map-popap">
-      <button class="map-popap__close" type="button" title="close">Закрыть</button>
+    <div class="map-popap visually-hidden">
+      <button class="map-popap__close btn-close" type="button" title="close">Закрыть</button>
     </div>
 
     <!--Popap Write us-->
-    <div class="write-popap">
-      <button class="write-popap__close" type="button" title="close">Закрыть</button>
-      <form class="write-form">
-        <label for="name-form">Ваше имя:</label>
-        <input id="name-form" type="text" name="name" placeholder="Представьтесь, пожалуйста">
-        <label for="email-form">Ваш e-mail:</label>
-        <input id="email-form" type="email" name="email" placeholder="Для отправки ответа">
-        <label for="text-form">Текст письма:</label>
-        <textarea id="text-form" name="text" placeholder="В свободной форме"></textarea>
-        <button class="write-form__btn btn" type="submit">Отправить</button>
+    <div class="relation-popap visually-hidden">
+      <button class="relation-popap__close btn-close" type="button" title="close">Закрыть</button>
+      <form class="relation-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="relation-form__item">
+          <label for="relation-name">Ваше имя:</label>
+          <input id="relation-name" type="text" name="name" placeholder="Представьтесь, пожалуйста" value="">
+        </p>
+        <p class="relation-form__item">
+          <label for="relation-email">Ваш e-mail:</label>
+          <input id="relation-email" type="email" name="email" placeholder="Для отправки ответа" value="">
+        </p>
+        <p class="relation-form__item">
+          <label for="relation-text">Текст письма:</label>
+          <textarea id="relation-text" name="text" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="relation-form__btn btn" type="submit">Отправить</button>
       </form>
     </div>
 

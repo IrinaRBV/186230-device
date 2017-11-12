@@ -8,7 +8,7 @@
 <body>
 
   <header class="main-header">
-    <a class="main-header__logo" href="#"><img src="http://placehold.it/150x100" alt="Device"></a>
+    <a class="main-header__logo" href="#"><img src="img/logo.png" alt="Device"></a>
     <nav class="main-nav">
       <form class="search">
         <input type="search" name="search">
@@ -24,7 +24,7 @@
       </ul>
       <ul class="site-nav">
         <li class="site-nav__item"><a href="#">Каталог товаров</a>
-          <ul class="catalog-nav">
+          <ul class="catalog-nav visually-hidden">
             <li class="catalog-nav__item"><a href="#">Виртуальная реальность</a></li>
             <li class="catalog-nav__item"><a href="#">Моноподы для селфи</a></li>
             <li class="catalog-nav__item"><a href="#">Экшн-камеры</a></li>
@@ -53,15 +53,70 @@
 
     <div class="catalog-wrap">
 
-      <section class="filter">
-        <h2>Фильтр</h2>
-        <!--Форма-->
+      <section class="filter-form">
+        <h2>Фильтр:</h2>
+         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="filter__item">
+            <legend>Стоимость:</legend>
+            <div class="filter__price-controls">
+              <label class="filter__min-price"><input type="text" name="price" id="price-1" value="0"></label>
+              <span>&ndash;</span>
+              <label class="filter__max-price"><input type="text" name="price" id="price-2" value="5000"></label>
+            </div>
+            <div class="filter__range-controls">
+              <div class="filter__line-controls">
+                <div class="filter__line"></div>
+              </div>
+              <div class="dot min-dot"></div>
+              <div class="dot max-dot"></div>
+            </div>
+          </fieldset>
+          <fieldset class="filter__item">
+            <legend>Цвет</legend>
+            <ul class="filter__list">
+              <li class="filter__option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="black-color" checked>
+                <label for="black-color">Черный</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="white" id="white-color">
+                <label for="white-color">Белый</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="blue" id="blue-color" checked>
+                <label for="blue-color">Синий</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="red" id="red-color" checked>
+                <label for="red-color">Красный</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pink" id="pink-color">
+                <label for="pink-color">Розовый</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter__item">
+            <legend>Bluetooth</legend>
+            <ul class="filter__list">
+              <li class="filter__option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="bluetooth" value="" id="bluetooth-plus" checked>
+                <label for="bluetooth-plus">Есть</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="bluetooth" value="" id="bluetooth-minus">
+                <label for="bluetooth-minus">Нет</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit" class="filter__btn btn">Показать</button>
+        </form>
       </section>
 
       <div class="catalog-inner">
 
         <section class="sort">
-          <h2>Сортировка</h2>
+          <h2>Сортировка:</h2>
           <ul class="sort__list">
             <li class="sort__item"><a href="#">По цене</a></li>
             <li class="sort__item"><a href="#">По типу</a></li>
@@ -71,35 +126,35 @@
 
         <section class="production">
           <article class="goods__item">
-            <a href="#"><img src="http://placehold.it/150x100" alt=""></a>
+            <a href="#"><img src="img/item-1.jpg" alt=""></a>
             <h3><a href="#">Любительская селфи-палка</a></h3>
             <a class="" href="#">500 руб.</a>
           </article>
           <article class="goods__item">
-            <a href="#"><img src="http://placehold.it/150x100" alt=""></a>
+            <a href="#"><img src="img/item-2.jpg" alt=""></a>
             <h3><a href="#">Профессиональная селфи-палка</a></h3>
             <a class="" href="#">1 500 руб.</a>
           </article>
           <article class="goods__item">
-            <a href="#"><img src="http://placehold.it/150x100" alt=""></a>
+            <a href="#"><img src="img/item-3.jpg" alt=""></a>
             <h3><a href="#">Непотопляемая селфи-палка</a></h3>
             <a class="" href="#">2 500 руб.</a>
           </article>
           <article class="goods__item">
-            <a href="#"><img src="http://placehold.it/150x100" alt=""></a>
+            <a href="#"><img src="img/item-4.jpg" alt=""></a>
             <h3><a href="#">Селфи-палка "Следуй за мной"</a></h3>
             <a class="" href="#">4 900 руб.</a>
           </article>
         </section>
 
         <section class="pagination">
-          <p class="pagination__text">Назад</p>
+          <button class="pagination__text" type="button">Назад</button>
           <ul class="pagination__list">
             <li class="pagination__item"><a href="#">1</a></li>
             <li class="pagination__item"><a href="#">2</a></li>
             <li class="pagination__item"><a href="#">3</a></li>
           </ul>
-          <p class="pagination__text">Вперед</p>
+          <button class="pagination__text" type="button">Вперед</button>
         </section>
 
       </div>
@@ -109,7 +164,7 @@
 
   <footer class="main-footer">
     <a class="main-footer__logo" href="#">
-      <img src="http://placehold.it/150x100" alt="Device">
+      <img src="img/logo-footer.png" alt="Device">
     </a>
     <p class="main-footer__contact">г. Москва, ул. Строителей, 15</p>
     <ul class="footer-nav">
@@ -131,7 +186,7 @@
     </ul>
     <p class="phone">Тел.: +7(495) 495-95-95</p>
     <a href="https://htmlacademy.ru/intensive/htmlcss">
-      <img src="http://placehold.it/150x100" alt="HTML Academy">
+      <img src="img/logo-html.svg" alt="HTML Academy">
     </a>
   </footer>
 
